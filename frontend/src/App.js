@@ -11,9 +11,12 @@ function App() {
 
   return (
     <div className="App">
+      <h1>CodeClarifier</h1>
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-                
+        
+
+        
         <div className="textarea-container">
           <textarea 
             className="left-aligned-textarea" 
@@ -22,12 +25,14 @@ function App() {
             onChange={handleinputTextAreaChange}
           ></textarea>
           
-          
+          <button className="button1">
+            Generate AI Explanation
+          </button>
           
           <textarea className="right-aligned-textarea" placeholder="Output Generated Here"></textarea>
         </div>
 
-        <div className="output">
+        <div>
           <h3>Input Textarea Content:</h3>
           <p>{inputTextareaValue}</p>
         </div>
