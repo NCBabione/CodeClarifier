@@ -1,22 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react"
 
 function App() {
+  const [inputTextareaValue, setInputTextareaValue] = useState("");
+
+  const handleinputTextAreaChange = (e) => {
+    setInputTextareaValue(e.target.value);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+                
+        <div className="textarea-container">
+          <textarea 
+            className="left-aligned-textarea" 
+            placeholder="Input Text Here"
+            value={inputTextareaValue}
+            onChange={handleinputTextAreaChange}
+          ></textarea>
+          
+          
+          
+          <textarea className="right-aligned-textarea" placeholder="Output Generated Here"></textarea>
+        </div>
+
+        <div className="output">
+          <h3>Input Textarea Content:</h3>
+          <p>{inputTextareaValue}</p>
+        </div>
+
       </header>
     </div>
   );
