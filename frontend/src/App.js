@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, {useState} from "react"
 
@@ -11,13 +10,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>CodeClarifier</h1>
-      
       <header className="App-header">
-        
+        <h1>CodeClarifier</h1>
+      </header>
 
-        
-        <div className="textarea-container">
+      <body>
+      <div className="textarea-container">
           <textarea 
             className="left-aligned-textarea" 
             placeholder="Input Text Here"
@@ -31,13 +29,15 @@ function App() {
           
           <textarea className="right-aligned-textarea" placeholder="Output Generated Here"></textarea>
         </div>
+        
+        
+      </body>
 
-        <div>
-          <h3>Input Textarea Content:</h3>
-          <p>{inputTextareaValue}</p>
-        </div>
+      <div>
+          <h3 className={"header3"}>Debug Area: Input Textarea Content:</h3>
+          <p className={"paragraph"}>{inputTextareaValue}</p>
+      </div>
 
-      </header>
     </div>
   );
 }
