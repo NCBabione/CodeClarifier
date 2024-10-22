@@ -1,13 +1,25 @@
 .App {
   text-align: center;
-  background-color: black;
   color: lightblue;
 }
 
+body {
+  background-color: black;
+}
+
 .textarea-container{
-  display: flex;
-  justify-content: space-between;
+  display:flex;
+  justify-content:space-between;
   width: 100%;
+
+}
+
+.header3 {
+  color: green;
+}
+
+.paragraph {
+  color: lightgreen;
 }
 
 .left-aligned-textarea,
@@ -15,12 +27,8 @@
   width: 600px; /* Set width for each textarea */
   height: 300px; /* Set height for each textarea */
   resize: none; /* Disable resizing if needed */
-}
-
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-  display: flex;
+  background-color: black;
+  color: white;
 }
 
 .button1 {
@@ -29,33 +37,9 @@
   color: white;
   border-radius: 12px;
   font-size: 16px;
-  font-family:Georgia, 'Times New Roman', Times, serif
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #05132e;
-  min-height: 100vh;
-
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /*font-size: calc(10px + 2vmin);*/
-  color: white;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  top: 100px;
 }
