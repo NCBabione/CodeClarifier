@@ -37,7 +37,7 @@ function App() {
             onClick={handleButtonPress}
           >Generate AI Explanation</button>
           
-          <textarea className="right-aligned-textarea" placeholder="Output Generated Here" id="output">outputTextareaValue</textarea>
+          <textarea className="right-aligned-textarea" placeholder="Output Generated Here" id="output"></textarea>
         </div>
         
 
