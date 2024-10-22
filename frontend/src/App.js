@@ -1,11 +1,20 @@
 import './App.css';
 import React, {useState} from "react"
 
+
+
 function App() {
   const [inputTextareaValue, setInputTextareaValue] = useState("");
+  /*const [outputTextareaValue, setOutputTextareaValue] = "Hello, you pressed the button!!!";*/
 
   const handleinputTextAreaChange = (e) => {
     setInputTextareaValue(e.target.value);
+  }
+
+  const handleButtonPress = () => {
+    var outputBox = document.getElementById("output");
+    outputBox.value = "Pass API data into this value";
+    /*setOutputTextareaValue(e.target.value);*/
   }
 
   return (
@@ -23,14 +32,15 @@ function App() {
             onChange={handleinputTextAreaChange}
           ></textarea>
           
-          <button className="button1">
-            Generate AI Explanation
-          </button>
+          <button 
+            className="button1"
+            onClick={handleButtonPress}
+          >Generate AI Explanation</button>
           
-          <textarea className="right-aligned-textarea" placeholder="Output Generated Here"></textarea>
+          <textarea className="right-aligned-textarea" placeholder="Output Generated Here" id="output">outputTextareaValue</textarea>
         </div>
         
-        
+
       </body>
 
       <div>
