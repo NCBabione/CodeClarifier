@@ -22,8 +22,8 @@ def parseCode(request):
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are a code analysis assistant. Analyze the provided code and explain what it does line by line."},
-                    {"role": "user", "content": f"Please analyze this code and explain what it does:\n\n{input_code}"}
+                    {"role": "system", "content": "You are a code analysis assistant. Analyze the provided code and explain what it does line by line try not to give a summary but instead comments inline that matches the style of the languge you think youre given"},
+                    {"role": "user", "content": f"Please analyze this code and explain what it does by adding comments for each line:\n\n{input_code}"}
                 ]
             )
 
