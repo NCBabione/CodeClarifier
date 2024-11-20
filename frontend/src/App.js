@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 function App() {
   const [inputTextareaValue, setInputTextareaValue] = useState("");
-  const [outputText, setOutputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -37,10 +36,10 @@ function App() {
       }
 
       const data = await response.json();
-      setOutputText(data.ai_response);
+      setInputTextareaValue(data.ai_response);
     } catch (err) {
       setError(err.message);
-      setOutputText("");
+      setInputTextareaValue("");
     } finally {
       setIsLoading(false);
     }
@@ -66,13 +65,6 @@ function App() {
           >
             {isLoading ? 'Generating...' : 'Generate AI Explanation'}
           </button>
-          
-          <textarea 
-            className="right-aligned-textarea" 
-            placeholder="Output Generated Here"
-            value={outputText}
-            readOnly
-          ></textarea>
         </div>
 
         {error && (
